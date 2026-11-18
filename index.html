@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ресторан</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo" id="navLogo">РЕСТОРАН</a>
+      <ul class="nav-links">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#promo">Акции</a></li>
+        <li><a href="#booking">Контакты</a></li>
+      </ul>
+      <a href="#booking" class="btn btn-primary">Забронировать стол</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge" id="heroCity">г. Владимир</span>
+        <h1 id="heroTitle">Вкус, ради которого хочется вернуться</h1>
+        <p id="heroSubtitle">Авторские блюда, уютная атмосфера и быстрая подача.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary">Забронировать столик</a>
+          <a href="#menu" class="btn btn-outline">Открыть меню</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="about">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <h3>Свежие продукты</h3>
+        <p>Готовим из отборного фермерского мяса и свежих овощей без полуфабрикатов.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Уютный зал</h3>
+        <p>Комфортная посадка для ужина, встречи с друзьями или семейного праздника.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Быстрая доставка</h3>
+        <p>Привезём горячие блюда по городу за 45–60 минут в термосумках.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>Наше меню</h2>
+        <p>Популярные позиции кухни и бара</p>
+      </div>
+      <div class="tabs" id="categoryTabs"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <div class="container" id="promo">
+    <div class="promo-banner">
+      <div>
+        <h2>Скидка 15% именинникам</h2>
+        <p>Отмечайте день рождения в кругу близких — дарим скидку на всё меню кухни.</p>
+      </div>
+      <a href="#booking" class="btn btn-primary">Забронировать дату</a>
+    </div>
+  </div>
+
+  <section class="booking-section" id="booking">
+    <div class="container booking-grid">
+      <div>
+        <div class="section-header" style="text-align: left; margin-bottom: 28px;">
+          <h2>Ждём вас в гости</h2>
+          <p>Забронируйте стол заранее, чтобы мы подготовили лучшее место</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Адрес</div>
+          <div class="contact-value" id="contactAddress">г. Владимир</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Телефон</div>
+          <div class="contact-value" id="contactPhone">+7 (900) 000-00-00</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Режим работы</div>
+          <div class="contact-value" id="contactHours">Ежедневно с 12:00 до 00:00</div>
+        </div>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <h3>Бронь столика</h3>
+        <div class="form-group">
+          <label>Ваше имя</label>
+          <input type="text" id="guestName" placeholder="Например, Алексей" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Дата</label>
+            <input type="date" id="guestDate" required />
+          </div>
+          <div class="form-group">
+            <label>Время</label>
+            <input type="time" id="guestTime" value="19:00" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Количество гостей</label>
+          <select id="guestCount">
+            <option value="2 гостя">2 гостя</option>
+            <option value="3-4 гостя">3–4 гостя</option>
+            <option value="5-6 гостей">5–6 гостей</option>
+            <option value="Банкет (7+ гостей)">Банкет (7+ гостей)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+          Отправить бронь в Telegram
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p id="footerCopy">© 2026 Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
