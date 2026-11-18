@@ -6,8 +6,8 @@ const RESTAURANT_CONFIG = {
   address: "г. Владимир, ул. Княгининская, 7",
   phone: "+7 (4922) 42-11-56",
   hours: "Вс–Чт: 12:00–23:00 | Пт–Сб: 12:00–01:00",
-  developerTelegram: "@твой_ник_в_тг", // Впиши свой Telegram, чтобы владелец мог сразу написать тебе
-  isDemo: true, // Включает защиту прототипа
+  developerTelegram: "@outworld_destroyi",
+  isDemo: true,
   menu: [
     {
       category: "Горячие блюда",
@@ -117,9 +117,8 @@ function renderMenu() {
 renderTabs();
 renderMenu();
 
-document.getElementById("guestDate").value = new Date().toISOString().split("T")[0];
+document.getElementById("guestDate").value = new Date().toISOString().split("T");
 
-// Защита демо-версии: плашка внизу экрана и перехват отправки формы
 if (RESTAURANT_CONFIG.isDemo) {
   const banner = document.createElement("div");
   banner.style.cssText = `
